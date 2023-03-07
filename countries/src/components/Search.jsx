@@ -6,8 +6,8 @@ function Search() {
             <input className="search_input" type="text" placeholder="Search for a country..."/>
         </div>
        
-        <select className="search_select" >
-            <option value="filter" disabled="true" selected="true">Filter by Region</option>
+        <select className="search_select" defaultValue={"filter"}>
+            <option value="filter" disabled={true}>Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>
             <option value="asia">Asia</option>

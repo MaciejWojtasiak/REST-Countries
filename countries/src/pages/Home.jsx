@@ -1,11 +1,11 @@
 import Search from "../components/Search";
-import Country from "../components/Country";
+import Countries from "../components/Countries";
 
 function Home() {
   return (
     <div className='home'>
       <Search />
-      <Country />
+      <Countries />
     </div>
   )
 }

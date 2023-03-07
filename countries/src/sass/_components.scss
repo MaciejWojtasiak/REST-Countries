@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    color: $white;
      .slogan{
         font-weight: 600;
      }
@@ -19,7 +18,8 @@
 }
 
 .search {
-   padding: 4rem 2rem;
+   padding: 0 2rem;
+   margin-top: 4rem;
    height: 70px;
    display: flex;
    align-items: center;
@@ -32,23 +32,59 @@
       align-items: center;
       justify-content: flex-start;
       gap: 5px;
-      
-      ion-icon {
-         color: $white;
-      }      
+          
       input {
          border: none;
          outline: none;
          background-color: $dark-blue;
-         color: white;
       }
    }
    .search_select {
       padding: 1rem;
       border-radius: 5px;
       background-color: $dark-blue;
-      color: $white;
       border: none;
       cursor: pointer;
+   }
+}
+
+.countries {
+   padding: 0 2rem;
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: row;   
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   gap: 5.5rem;
+   .country  {
+      width: 300px;
+      height: 350px;
+      background-color: $dark-blue;
+      border-radius: 10px;
+      overflow: hidden;
+      .country_img  {
+         width: 100%;
+         height: 50%;
+         display: block;
+      }
+      .country_details {
+         padding: 1rem;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+         gap: 5px;
+         p {
+            font-weight: 600;
+         }
+         .country_title {
+            margin-bottom: 1rem;
+            font-weight: 800;
+         }
+         .value {
+            font-weight: 300;
+         }
+         
+      }
    }
 }
