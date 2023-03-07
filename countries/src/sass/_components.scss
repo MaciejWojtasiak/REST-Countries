@@ -17,3 +17,38 @@
       cursor: pointer;
      }
 }
+
+.search {
+   padding: 4rem 2rem;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   .input-box{
+      padding: 1rem 1rem;
+      border-radius: 5px;
+      background-color: $dark-blue;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      
+      ion-icon {
+         color: $white;
+      }      
+      input {
+         border: none;
+         outline: none;
+         background-color: $dark-blue;
+         color: white;
+      }
+   }
+   .search_select {
+      padding: 1rem;
+      border-radius: 5px;
+      background-color: $dark-blue;
+      color: $white;
+      border: none;
+      cursor: pointer;
+   }
+}
