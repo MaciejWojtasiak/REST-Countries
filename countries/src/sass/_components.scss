@@ -1,0 +1,19 @@
+.navbar {
+    height:70px;
+    background-color: $dark-blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    color: $white;
+     .slogan{
+        font-weight: 600;
+     }
+     .mode-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+     }
+}
