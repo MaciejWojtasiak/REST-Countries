@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [mode, setMode] = useState("dark");
@@ -8,7 +9,9 @@ function Navbar() {
 
   return (
     <nav className='navbar'>
-        <p className="slogan">Where in the world?</p>
+        <Link className="link" to="/">
+          <p className="slogan">Where in the world?</p>
+        </Link>
         <div className="mode-switch" onClick={handleClick}>
           {mode==="dark" ? (<><ion-icon name="moon-outline"></ion-icon><span className="mode-text">Dark Mode</span></>) :
            (<><ion-icon name="sunny-outline"></ion-icon><span className="mode-text">Light Mode</span></>)

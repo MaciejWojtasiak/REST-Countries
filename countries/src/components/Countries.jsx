@@ -5,7 +5,7 @@ function Countries() {
   return (
     <div className="countries">
         {countries.map((country, index)=>{
-           return <Country key = {index} country={country}/>
+           return <Country key={index} country={country} id={index}/>
         })}
         
     </div>
