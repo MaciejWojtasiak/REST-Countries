@@ -1,7 +1,7 @@
 function Search() {
   return (
     <div className="search">
-        <div className="input-box">
+        {/* <div className="input-box">
             <ion-icon name="search-outline"></ion-icon>
             <input className="search_input" type="text" placeholder="Search for a country..."/>
         </div>
@@ -13,7 +13,7 @@ function Search() {
             <option value="asia">Asia</option>
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
-        </select>
+        </select> */}
     </div>
   )
 }
