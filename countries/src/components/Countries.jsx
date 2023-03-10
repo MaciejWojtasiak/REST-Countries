@@ -10,12 +10,11 @@ function Countries({ search}) {
       return item.name.toLowerCase().includes(search.toLowerCase()) 
     });
   }
- 
 
   return (
     <div className="countries">
         {countries.map((country, index)=>{
-           return <Country key={index} country={country} id={index}/>
+           return <Country key={index} country={country} />
         })}
         
     </div>

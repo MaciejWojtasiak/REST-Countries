@@ -4,8 +4,9 @@ import data from '../../data.json';
 
 function CountryPage() {
   const location = useLocation();
-  const pageID = location.pathname.split('/').pop();
-  const countryData = data[pageID];
+  const pageCode = location.pathname.split('/').pop();
+  const country = data.filter(item=>item.alpha2Code === pageCode);
+  const countryData = country[0];
   return (
     <div className="countryPage">
         <SingleCountry
