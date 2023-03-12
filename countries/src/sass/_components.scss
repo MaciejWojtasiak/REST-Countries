@@ -128,7 +128,7 @@
          border-radius: 5px;
          display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: center;         
       }
    }
 }
@@ -150,6 +150,9 @@
       flex-wrap: wrap;
       gap: 1rem;
       flex: 3;
+      .value {
+         text-align: center;
+      }
    }
 }
 

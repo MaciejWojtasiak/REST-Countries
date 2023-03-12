@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom"
+import data from '../../data.json';
 
 function SingleCountry({flag,name,nativeName,population,region,subregion,capital,topLevelDomain,currencies, languages,borders}) {
+
+  const bordersNames = data.filter((item) =>{  
+    if(borders) {
+      if(borders.includes(item.alpha3Code)) return item;
+    }    
+  });
+
   return (
     <div className="singleCountry">
         <Link className="link" to={"/"}>
@@ -22,12 +30,12 @@ function SingleCountry({flag,name,nativeName,population,region,subregion,capital
                 <div className="col">
                   <p className="country_topLevelDomain">Top Level Domain: <span className="value">{topLevelDomain}</span></p>
                   <p className="country_currencies">Currencies: <span className="value">{currencies ? currencies.map((currency)=>currency.name) : ""}</span></p>
-                  <p className="country_languages">Languages: <span className="value">{languages ? languages.map((language)=> language.name ): ""}</span></p>  
+                  <p className="country_languages">Languages: <span className="value">{languages ? languages.map((language, index) => (<span>{index > 0 ? ", ": ''}{language.name}</span>)) : ""}</span></p>  
                 </div>
                
               </div>
               <div className="borders-container">
-                <p className="country_borders">Border Countries: </p><div className="links">{borders ? borders.map((border)=>(<span className="value"><Link className="link border-link" to={`/country/${border}`}>{border}</Link></span>)): "No borders."}</div>
+                <p className="country_borders">Border Countries: </p><div className="links">{bordersNames.length != 0 ? bordersNames.map((border)=>(<span className="value"><Link className="link border-link" to={`/country/${border.alpha3Code}`}>{border.name}</Link></span>)): "No borders."}</div>
               </div>
               
             </div>

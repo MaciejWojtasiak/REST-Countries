@@ -5,7 +5,7 @@ import data from '../../data.json';
 function CountryPage() {
   const location = useLocation();
   const pageCode = location.pathname.split('/').pop();
-  const country = data.filter(item=>item.alpha2Code === pageCode);
+  const country = data.filter(item=>item.alpha3Code === pageCode);
   const countryData = country[0];
   return (
     <div className="countryPage">
