@@ -2,14 +2,23 @@ import Country from "./Country";
 import data from '../../data.json';
 
 
-function Countries({ search}) {
+function Countries({ search, filter}) {
   let countries = [];   
-  if(search === ''){ countries=data}
-  else {
+  if(search === '' && filter === ''){ countries=data}
+  else if(search != '' && filter === ''){
     countries = data.filter(item=>{ 
-      return item.name.toLowerCase().includes(search.toLowerCase()) 
+      return item.name.toLowerCase().includes(search.toLowerCase()); 
+    });
+  } else if(search === '' && filter != '' ) {
+    countries = data.filter(item=>{ 
+      return item.region.toLowerCase().includes(filter.toLowerCase()); 
+    });
+  } else {
+    countries = data.filter(item=>{ 
+      return item.region.toLowerCase().includes(filter.toLowerCase()) && item.name.toLowerCase().includes(search.toLowerCase()); 
     });
   }
+
 
   return (
     <div className="countries">
