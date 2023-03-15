@@ -18,8 +18,7 @@
 
 .search {
    padding: 0 2rem;
-   margin-top: 4rem;
-   height: 70px;
+   margin-top: 4rem; 
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -89,6 +88,17 @@
    }
 }
 
+@media(max-width:600px) {
+   .search{
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 20px;
+       .input-box{
+           width: 95%;
+       }
+   }
+}
+
 .single_country {
    display: flex;
    flex-direction: row;
@@ -96,6 +106,7 @@
    .country_img{
       width: 560px;
       height: 400px;
+      object-fit: contain;
    }
    .country_details {
       width: 50%;
@@ -126,12 +137,50 @@
          background-color:$dark-blue;
          font-size: .8rem;
          border-radius: 5px;
-         display: flex;
-         align-items: center;
-         justify-content: center;         
+         padding-top: 10px;   
+         line-height: .8rem;    
+         text-overflow: ellipsis;
+
+         /* Required for text-overflow to do anything */
+         white-space: nowrap;
+         overflow: hidden;
       }
    }
 }
+@media(max-width:1080px) {
+   .single_country {    
+      flex-direction: column;    
+      .country_details{
+         width: 100%;
+         margin-top: 2rem;
+         padding-left: unset;
+         gap: 1rem;
+      }  
+      .country_img{
+         width: 100%;
+         height: auto;
+      }      
+   }
+}
+@media(max-width:600px) {
+   .single_country {          
+      .country_details {
+         width: 100%;
+         padding-left: unset;
+         margin-top: 2rem;
+         gap: 1rem;  
+         .country_props{
+            grid-template-columns: unset;
+         }
+         .borders-container {
+            align-items: flex-start;
+            flex-direction: column;
+         }
+      }
+   }
+}
+
+
 
 .borders-container {
    display: flex;

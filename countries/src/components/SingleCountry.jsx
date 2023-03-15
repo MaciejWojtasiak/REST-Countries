@@ -7,9 +7,10 @@ function SingleCountry({flag,name,nativeName,population,region,subregion,capital
     if(borders) {
       if(borders.includes(item.alpha3Code)) return item;
     }    
-  });
+  });  
 
   return (
+    
     <div className="singleCountry">
         <Link className="link" to={"/"}>
             <button className="btn back-btn"><ion-icon name="arrow-back-outline"></ion-icon>Back</button>

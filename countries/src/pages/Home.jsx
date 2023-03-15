@@ -24,7 +24,7 @@ function Home() {
         </div>
        
         <select onChange={handleFilterChange} className="search_select" defaultValue={"filter"}>
-            <option value="filter" disabled={true}>Filter by Region</option>
+            <option value="">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>
             <option value="asia">Asia</option>
