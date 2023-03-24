@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import data from '../../data.json';
+import data from '../assets/data.json';
 
 function SingleCountry({flag,name,nativeName,population,region,subregion,capital,topLevelDomain,currencies, languages,borders}) {
 

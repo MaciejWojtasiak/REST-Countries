@@ -1,5 +1,5 @@
 import Country from "./Country";
-import data from '../../data.json';
+import data from '../assets/data.json';
 
 
 function Countries({ search, filter}) {

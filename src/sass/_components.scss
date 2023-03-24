@@ -17,7 +17,7 @@
 }
 
 .search {
-   padding: 0 2rem;
+   padding: 2rem;
    margin-top: 4rem; 
    display: flex;
    align-items: center;
@@ -47,8 +47,8 @@
 }
 
 .countries {
-   padding: 0 2rem;
-   margin-top: 2rem;
+   padding: 2rem;
+   margin:1rem 0;
    display: flex;
    flex-direction: row;   
    justify-content: space-evenly;
@@ -179,7 +179,9 @@
       }
    }
 }
-
+.singleCountry {
+   overflow: visible;
+}
 
 
 .borders-container {

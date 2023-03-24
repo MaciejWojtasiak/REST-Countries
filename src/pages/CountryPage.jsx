@@ -1,6 +1,6 @@
 import SingleCountry from "../components/SingleCountry";
 import { useLocation } from "react-router-dom";
-import data from '../../data.json';
+import data from '../assets/data.json';
 
 function CountryPage() {
   const location = useLocation();
